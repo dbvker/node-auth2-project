@@ -31,7 +31,6 @@ router.post('/login', checkUsernameExists, (req, res, next) => {
                     message: `${user.username} is back!`,
                     token,
                 });
-                localStorage.setItem('token', token);
             } else {
                 next({ status: 401, message: 'Invalid Credentials' });
             }
